@@ -402,7 +402,7 @@ MiniZinc同时也提供了集合推导式，它有类似的语法：例如 :mzn:
 .. code-block:: minizinc
 
   (min (r in Resources where consumption[p,r] > 0) 
-                                   (capacity[r] div consumption[p,r]));
+                                   (capacity[r] div consumption[p,r]))
 
 决定了在考虑了每种资源 :mzn:`r` 的数量以及制造产品 :mzn:`p` 需要的 :mzn:`r` 量的情况下， :mzn:`p` 可以生产的最大量。注意过滤器 :mzn:`where consumption[p,r] > 0` 的使用保证了只有此产品需要的资源才会考虑，因此避免了出现除数为零的错误。所以，完整的表达式
 
