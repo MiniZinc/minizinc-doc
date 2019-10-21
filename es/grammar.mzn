@@ -81,7 +81,7 @@
 <ti-variable-expr-tail> ::= $[A-Za-z][A-Za-z0-9_]*
 
 % Set type-inst expressions
-<set-ti-expr-tail> ::= "set" "of" <base-type>
+<set-ti-expr-tail> ::= "set" "of" <ti-expr>
 
 % Array type-inst expressions
 <array-ti-expr-tail> ::= "array" [ <ti-expr> "," ... ] "of" <ti-expr>
