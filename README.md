@@ -1,3 +1,7 @@
+# This repository has moved #
+
+**The MiniZinc documentation and tutorial are now maintained in the repository of the [MiniZinc compiler](https://github.com/MiniZinc/libminizinc). You can report any issues and suggest any improvements there.**
+
 # README #
 
 This repository contains the MiniZinc documentation.
