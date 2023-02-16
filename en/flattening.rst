@@ -88,7 +88,7 @@ like the one in :numref:`fig-nonoverlap`.
 Instead, each subexpression in the expression is named, and we create a
 constraint to construct the value of each expression.  Let's examine the
 subexpressions of the constraint expression. :mzn:`(x1 - x2)` is a
-subexpression, if we name if :mzn:`FLOAT01` we can define it as
+subexpression, if we name it :mzn:`FLOAT01` we can define it as
 :mzn:`constraint FLOAT01 = x1 - x2;` Notice that this expression occurs
 twice in the model. We only need to construct the value once, we can then
 reuse it.  This is called *common subexpression elimination*.
@@ -99,7 +99,7 @@ and we can define it as
 We can similarly name :mzn:`constraint FLOAT03 = y1 - y2;`
 and
 :mzn:`constraint FLOAT04 = FLOAT03 * FLOAT03;`
-and finally :mzn:`constraint FLOAT05 = FLOAT02 * FLOAT04;`.
+and finally :mzn:`constraint FLOAT05 = FLOAT02 + FLOAT04;`.
 The inequality constraint itself becomes
 :mzn:`constraint FLOAT05 >= 25.0;` since :mzn:`(r1+r2)*(r1 + r2)`
 is calculated as :mzn:`25.0`.
@@ -111,7 +111,7 @@ The flattened constraint is hence
   constraint FLOAT02 = FLOAT01 * FLOAT01;
   constraint FLOAT03 = y1 - y2;
   constraint FLOAT04 = FLOAT03 * FLOAT03;
-  constraint FLOAT05 = FLOAT02 * FLOAT04;
+  constraint FLOAT05 = FLOAT02 + FLOAT04;
   constraint FLOAT05 >= 25.0
 
 .. _sec-flat-fzn:
