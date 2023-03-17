@@ -6,6 +6,8 @@
 
 This repository contains the MiniZinc documentation.
 
+MiniZinc is an open-sourced constraint modeling language. Some common applications of MiniZinc is to model constraint satisfaction and optimization problems and solve with MiniZinc's builtin solvers.
+
 ### Building the docs ###
 
 You need the following tools to build the documentation:
